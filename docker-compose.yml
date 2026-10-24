@@ -1,0 +1,12 @@
+services:
+  modelvault:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - modelvault_data:/app/data
+      - modelvault_artifacts:/app/artifacts
+    restart: unless-stopped
+volumes:
+  modelvault_data:
+  modelvault_artifacts:
